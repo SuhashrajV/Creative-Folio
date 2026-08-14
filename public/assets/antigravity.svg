@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="agGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#694DF9"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White background -->
+  <rect width="100" height="100" rx="22" fill="#FFFFFF"/>
+
+  <!-- Arch/rocket body: rounded top, flat bottom sides, centered -->
+  <!-- Arch shape: a rect with fully rounded top -->
+  <path d="M35 72 L35 48 Q35 24 50 24 Q65 24 65 48 L65 72 Z" fill="url(#agGrad)"/>
+
+  <!-- Circle window cutout -->
+  <circle cx="50" cy="48" r="9" fill="#FFFFFF"/>
+
+  <!-- Rocket fins / base legs -->
+  <path d="M35 65 L26 75 L35 72 Z" fill="url(#agGrad)"/>
+  <path d="M65 65 L74 75 L65 72 Z" fill="url(#agGrad)"/>
+
+  <!-- Exhaust flame glow -->
+  <ellipse cx="50" cy="76" rx="8" ry="4" fill="#694DF9" opacity="0.4"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect width="100" height="100" rx="22" fill="#1e1e1e"/>
+  <!-- Figma 5-node logo centered in 100x100, original 60x90 → scale ~0.72, offset x=28.34 y=17.51 -->
+  <g transform="translate(28.34,17.51) scale(0.722)">
+    <!-- Bottom-left: Red -->
+    <path fill="#F24E1E" d="M15 90c8.28 0 15-6.72 15-15V60H15C6.72 60 0 66.72 0 75s6.72 15 15 15z"/>
+    <!-- Middle-left: Green -->
+    <path fill="#0ACF83" d="M0 45c0-8.28 6.72-15 15-15h15v30H15C6.72 60 0 53.28 0 45z"/>
+    <!-- Top-left: Orange -->
+    <path fill="#FF7262" d="M0 15C0 6.72 6.72 0 15 0h15v30H15C6.72 30 0 23.28 0 15z"/>
+    <!-- Top-right: Purple -->
+    <path fill="#A259FF" d="M30 0h15c8.28 0 15 6.72 15 15s-6.72 15-15 15H30V0z"/>
+    <!-- Circle: Blue -->
+    <path fill="#1ABCFE" d="M60 45c0 8.28-6.72 15-15 15s-15-6.72-15-15 6.72-15 15-15 15 6.72 15 15z"/>
+  </g>
+</svg>

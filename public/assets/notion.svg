@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- White background -->
+  <rect width="100" height="100" rx="22" fill="#FFFFFF"/>
+
+  <!-- Bold N letterform centered in ~56x56 area at (22,22) -->
+  <!-- N: left vertical bar, diagonal, right vertical bar -->
+  <path d="M22 22h14L60 60.5V22h14v56H60L36 39.5V78H22z" fill="#000000"/>
+</svg>

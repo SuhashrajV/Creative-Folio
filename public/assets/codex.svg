@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Dark background -->
+  <rect width="100" height="100" rx="22" fill="#0a0a0a"/>
+
+  <!-- Terminal chevron '>' centered, shifted left to pair with cursor line -->
+  <polyline
+    points="30,38 44,50 30,62"
+    fill="none"
+    stroke="#10A37F"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Horizontal cursor/underline line to the right of chevron -->
+  <line
+    x1="50"
+    y1="50"
+    x2="72"
+    y2="50"
+    stroke="#10A37F"
+    stroke-width="7"
+    stroke-linecap="round"
+  />
+</svg>

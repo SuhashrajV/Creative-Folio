@@ -1,0 +1,164 @@
+﻿@import "tailwindcss";
+
+@theme {
+  /* ── Palette · dark, near-black, desaturated purple accent ─────────── */
+  --color-paper: #0a0a0c;
+  --color-tint: #0e0e11;
+  --color-surface: #121218;
+  --color-elevated: #191921;
+  --color-line: #22222b;
+  --color-line-soft: #1a1a22;
+  --color-ink: #f4f3f7;
+  --color-ink-dim: #d8d7de;
+  --color-muted: #a3a1ae;
+  --color-faint: #6a6975;
+
+  /* desaturated purple · never flat / neon */
+  --color-accent: #9b8cf2;
+  --color-accent-strong: #b3a8f5;
+  --color-accent-dim: #7d70c8;
+  --color-accent-glow: rgba(155, 140, 242, 0.45);
+  --color-accent-soft: rgba(155, 140, 242, 0.12);
+  --color-accent-veil: rgba(155, 140, 242, 0.06);
+  --color-accent-btn: #9b8cf2;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0a0a0c;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a34;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a46;
+}
+
+/* Text-stroke based lettering (intro / hero name draw) */
+.text-outline {
+  -webkit-text-stroke: 1px var(--color-accent);
+  paint-order: stroke fill;
+  color: transparent;
+}
+
+/* Process timeline · large step heading */
+.process-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  padding: 0.75rem 0;
+  transition: color 0.2s ease;
+}
+
+/* Nav pill */
+.nav-pill {
+  transition: background-color 0.4s ease, border-color 0.4s ease,
+    box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+}
+.nav-pill.is-frost {
+  background-color: rgba(18, 18, 24, 0.62);
+  border-color: rgba(34, 34, 43, 0.9);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Breathing glow for "Let's talk" */
+@keyframes breathe-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(155, 140, 242, 0), 0 0 18px 2px rgba(155, 140, 242, 0.14);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(155, 140, 242, 0.06), 0 0 34px 6px rgba(155, 140, 242, 0.3);
+  }
+}
+.breathe-glow {
+  animation: breathe-glow 4.2s ease-in-out infinite;
+}
+
+/* Faint drifting grid (contact background) */
+@keyframes drift-grid {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 220px 220px;
+  }
+}
+.bg-drift-grid {
+  background-image: linear-gradient(rgba(155, 140, 242, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 140, 242, 0.05) 1px, transparent 1px);
+  background-size: 220px 220px;
+  animation: drift-grid 90s linear infinite;
+}
+
+@keyframes marquee-move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee-move 30s linear infinite;
+}
+.marquee-wrap:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Contact card glow */
+.contact-card {
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+.contact-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px rgba(155, 140, 242, 0.35), 0 0 38px -6px rgba(155, 140, 242, 0.4);
+}
+
+/* Fallback initial states (JS animates these) */
+[data-reveal] {
+  will-change: transform, opacity;
+}
+
+/* Reduced motion — everything just appears */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .breathe-glow,
+  .bg-drift-grid,
+  .animate-marquee {
+    animation: none !important;
+  }
+  .process-heading {
+    transition: none !important;
+  }
+}
