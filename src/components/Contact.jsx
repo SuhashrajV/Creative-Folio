@@ -18,13 +18,13 @@ const headline = [
 const links = [
   {
     label: "Email",
-    value: "suhashrajvlogo78@gmail.com",
-    href: "mailto:suhashrajvlogo78@gmail.com",
+    value: "suhashrajvkgs78@gmail.com",
+    href: "mailto:suhashrajvkgs78@gmail.com",
   },
   {
     label: "LinkedIn",
-    value: "com/in/suhashrajvlassmy",
-    href: "https://www.linkedin.com/in/suhashrajvlassmy",
+    value: "linkedin.com/in/suhashrajvelusamy",
+    href: "https://www.linkedin.com/in/suhashrajvelusamy/",
   },
   {
     label: "Behance",
