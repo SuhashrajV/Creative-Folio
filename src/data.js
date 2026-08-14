@@ -21,6 +21,6 @@ export const marqueeItems = [
 
 export const socials = [
   { label: "Email", value: profile.email, url: `mailto:${profile.email}` },
-  { label: "LinkedIn", value: "linkedin.com/in/suhashrajvelusamy", url: profile.linkedin },
+  { label: "LinkedIn", value: "Suhash's LinkedIn", url: profile.linkedin },
   { label: "Behance", value: "behance.net/suhashrajv", url: profile.behance },
 ];

@@ -23,7 +23,7 @@ const links = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/suhashrajvelusamy",
+    value: "Suhash's LinkedIn",
     href: "https://www.linkedin.com/in/suhashrajvelusamy/",
   },
   {
@@ -126,7 +126,7 @@ export default function Contact() {
                 {l.label}
               </span>
               <span className="flex items-center justify-between gap-4">
-                <span className="block break-all font-display text-base font-medium text-ink sm:text-lg">
+                <span className="block whitespace-nowrap truncate font-display text-base font-medium text-ink sm:text-lg">
                   {l.value}
                 </span>
                 <span
