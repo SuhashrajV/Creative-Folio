@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { registerReveals, prefersReducedMotion } from "../lib/motion.js";
+import { GmailIcon, LinkedInIcon, BehanceIcon } from "./Icons.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,16 +19,19 @@ const headline = [
 const links = [
   {
     label: "Email",
+    Icon: GmailIcon,
     value: "suhashrajvkgs78@gmail.com",
     href: "mailto:suhashrajvkgs78@gmail.com",
   },
   {
     label: "LinkedIn",
+    Icon: LinkedInIcon,
     value: "Suhash's LinkedIn",
     href: "https://www.linkedin.com/in/suhashrajvelusamy/",
   },
   {
     label: "Behance",
+    Icon: BehanceIcon,
     value: "behance.net/suhashrajv",
     href: "https://www.behance.net/suhashrajv",
   },
@@ -120,11 +124,14 @@ export default function Contact() {
               data-reveal
               target={l.href.startsWith("http") ? "_blank" : undefined}
               rel="noreferrer"
-              className="contact-card group relative flex flex-col justify-between gap-8 overflow-hidden rounded-2xl border border-line bg-surface p-6"
+              className="contact-card group relative flex flex-col justify-between gap-8 overflow-hidden rounded-2xl border border-line bg-surface p-6 transition-all duration-300 hover:border-line-active"
             >
-              <span className="font-mono text-xs uppercase tracking-[0.28em] text-faint">
-                {l.label}
-              </span>
+              <div className="flex items-center gap-2.5">
+                <l.Icon className="h-5 w-5 shrink-0" />
+                <span className="font-mono text-xs uppercase tracking-[0.28em] text-faint group-hover:text-ink transition-colors">
+                  {l.label}
+                </span>
+              </div>
               <span className="flex items-center justify-between gap-4">
                 <span className="block whitespace-nowrap truncate font-display text-base font-medium text-ink sm:text-lg">
                   {l.value}
