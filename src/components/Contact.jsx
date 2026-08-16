@@ -26,7 +26,7 @@ const links = [
   {
     label: "LinkedIn",
     Icon: LinkedInIcon,
-    value: "Suhash's LinkedIn",
+    value: "SuhashrajVelusamy",
     href: "https://www.linkedin.com/in/suhashrajvelusamy/",
   },
   {
